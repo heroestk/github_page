@@ -1,20 +1,20 @@
+ï»¿
 
+    ã€€ã€€---
+    ã€€ã€€layout: default
+    ã€€ã€€title: æˆ‘çš„Blog
+    ã€€ã€€---
 
-    ¡¡¡¡---
-    ¡¡¡¡layout: default
-    ¡¡¡¡title: ÎÒµÄBlog
-    ¡¡¡¡---
+    ã€€ã€€<h2>{{ page.title }}</h2>
 
-    ¡¡¡¡<h2>{{ page.title }}</h2>
+    ã€€ã€€<p>æœ€æ–°æ–‡ç« </p>
 
-    ¡¡¡¡<p>×îÐÂÎÄÕÂ</p>
+    ã€€ã€€<ul>
 
-    ¡¡¡¡<ul>
+    ã€€ã€€ã€€ã€€{% for post in site.posts %}
 
-    ¡¡¡¡¡¡¡¡{% for post in site.posts %}
+    ã€€ã€€ã€€ã€€ã€€ã€€<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 
-    ¡¡¡¡¡¡¡¡¡¡¡¡<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    ã€€ã€€ã€€ã€€{% endfor %}
 
-    ¡¡¡¡¡¡¡¡{% endfor %}
-
-    ¡¡¡¡</ul>
+    ã€€ã€€</ul>
